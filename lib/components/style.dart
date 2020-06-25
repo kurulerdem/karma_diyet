@@ -64,3 +64,10 @@ TextStyle inputs = new TextStyle(
   fontWeight: FontWeight.bold,
   color: Colors.black,
 );
+
+TextStyle  diyetisyen_name = new TextStyle(
+  fontFamily: 'Blinker',
+  fontSize: 15,
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+);
