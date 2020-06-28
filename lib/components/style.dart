@@ -71,3 +71,18 @@ TextStyle  diyetisyen_name = new TextStyle(
   fontWeight: FontWeight.bold,
   color: Colors.black,
 );
+
+TextStyle basliktarif = new TextStyle(
+  fontFamily: 'Blinker',
+  backgroundColor: Colors.grey[200],
+  fontSize: 23,
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+);
+
+TextStyle ProfilGoruntu = new TextStyle(
+  fontFamily: 'Comfortaa',
+  fontSize: 11,
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+);

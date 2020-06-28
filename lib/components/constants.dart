@@ -3,7 +3,7 @@ import 'style.dart';
 final arkaplan = BoxDecoration(
   color: Colors.white,
   image: DecorationImage(
-      colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.color),
+      colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.9), BlendMode.color),
       image: AssetImage('assets/karma.jpg'),fit: BoxFit.cover
   ),
 );
@@ -22,8 +22,12 @@ final loginbox = BoxDecoration(
     topRight: Radius.circular(40.0),
   ),
 );
-final datebox = BoxDecoration(
-  color: pembe,
+final haftatarif = BoxDecoration(
+  image: DecorationImage(
+    colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.5), BlendMode.dstATop),
+    image: AssetImage('assets/tarif.jpg'),fit: BoxFit.cover
+  ),
+  color: Colors.grey[200],
   borderRadius: BorderRadius.all(Radius.circular(15),
 
   ),

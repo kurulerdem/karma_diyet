@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:karmadiyet/screens/diyetisyenler_screen.dart';
 import 'package:karmadiyet/screens/home_screen.dart';
 import 'package:karmadiyet/screens/login_screen.dart';
 import 'package:karmadiyet/screens/register_screen.dart';
@@ -24,6 +25,8 @@ class _KarmaDiyetState extends State<KarmaDiyet> {
         RegisterScreen.id:(context) => RegisterScreen(),
         LoginScreen.id:(context) => LoginScreen(),
         HomeScreen.id:(context) => HomeScreen(),
+        DiyetisyenlerScreen.id:(context)=>DiyetisyenlerScreen(),
+
 
       },
     );

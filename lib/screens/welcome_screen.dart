@@ -33,28 +33,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     children: <Widget>[
                       LoginContent(helptxt:'email adresi girin',passswd: false,),
                       LoginContent(helptxt:'şifrenizi girin',passswd: true,),
-                      ButtonContent(txt: 'Giriş'),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0, 20, 0, 5),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(60)
-                        ),
-                        width: 170,
-                        height: 40,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(10.0),
-                            side: BorderSide(color: Colors.lightBlue),
-                          ),
-                          onPressed: (){
-                            ///TODO: Bu Kısma link verilecek !
-                            Navigator.pushNamed(context, RegisterScreen.id);
-                          },
-                          child: Text('Üye Ol',style: buton,),
-
-                        ),
-                      ),
-                      Container(
+                      ButtonContent(txt: 'Giriş',onPress: () {
+                        Navigator.pushNamed(context, HomeScreen.id);
+                      },),
+                      ButtonContent(txt: 'Üye Ol',onPress: (){
+                        Navigator.pushNamed(context, RegisterScreen.id);
+                      },)
+                      ,Container(
                         child: FlatButton(onPressed: (){
 
                           ///TODO: RESET PASSWORD yazılacak.
@@ -73,12 +58,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 }
 
 class ButtonContent extends StatelessWidget {
-  ButtonContent({@required this.txt,});
+  ButtonContent({@required this.txt,this.onPress});
   final String txt;
-
+  final Function onPress;
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(60)
       ),
@@ -88,9 +74,7 @@ class ButtonContent extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: new BorderRadius.circular(10.0)
         ),
-        onPressed: (){
-              Navigator.pushNamed(context, HomeScreen.id);
-        },
+        onPressed: onPress,
         child: Text(txt,style: buton,),
 
       ),
