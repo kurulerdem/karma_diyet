@@ -8,4 +8,5 @@ class Diyetisyen {
   AssetImage avatar;
 
   Diyetisyen(this.name,this.ucret,this.rating,this.rate,this.avatar);
+
 }

@@ -62,7 +62,7 @@ TextStyle inputs = new TextStyle(
   fontFamily: 'Blinker',
   fontSize: 17,
   fontWeight: FontWeight.bold,
-  color: Colors.black,
+  color: Colors.white,
 );
 
 TextStyle  diyetisyen_name = new TextStyle(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:karmadiyet/components/constants.dart';
 import 'package:karmadiyet/components/style.dart';
+import 'package:http/http.dart' as http;
 
 class RegisterScreen extends StatefulWidget {
   static String id = 'register_screen';
@@ -10,6 +10,21 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+
+
+  TextEditingController email = new TextEditingController();
+  TextEditingController sifre = new TextEditingController();
+
+  Future<List> senddata() async {
+
+    final response = await http.post('http://localhost:8888/insertdata.php',
+    body: {
+      "email": email.text,
+      "sifre": sifre.text,
+    }
+    );
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +65,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             width: 250,
                             height: 70,
                             child: TextField(
+                              controller: email,
                               decoration: userinput,
                               style: inputs,
                             ),
@@ -62,6 +78,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             width: 250,
                             height: 70,
                             child: TextField(
+                              controller: sifre,
                               obscureText: true,
                               decoration: passwordinput,
                               style: inputs,
@@ -87,7 +104,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         height: 45,
                         child: RaisedButton(
                           color: Colors.green,
-                          onPressed: (){},
+                          onPressed: (){
+                            senddata();
+
+                          },
                           child: Text('Uye Ol',style: baslik2,),
 
                         ),
@@ -102,3 +122,4 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 }
+

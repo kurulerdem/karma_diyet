@@ -62,3 +62,20 @@ final repasswordinput = InputDecoration(
 
     )
 );
+final showProfile = BoxDecoration(
+    borderRadius: BorderRadius.circular(100.0),
+    boxShadow: [
+      BoxShadow(
+        color: Color(0x80000000),
+        blurRadius: 30.0,
+        offset: Offset(0.0, 5.0),
+      ),
+    ],
+    gradient: LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Colors.lime,
+        Color(0xff0abde3),
+      ],
+    ));

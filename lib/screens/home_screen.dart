@@ -29,6 +29,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: Icon(Icons.person_outline,color: Colors.black,),
                 onPressed: (){
                   ///TODO: Bu Click profil sayfasına gidecek !.
+                  ///
+                  ///  ///
+                                 ///
+                                 /// Burada diyetisyenin profili ve user profili olarak bunu kontrol etmemiz gerekiyor.
+                               /// örnek olarak eğer diyetsiyen olarak oturum açtıysa bunu dyt_ownprofilescreen adlı sayfaya aktarmamız gerekecek.
+                                  /// Yönetim panelini de oraya eklememiz gerekecektir. şimdilik bu kısıma ben sadece dyt profiline aktaracağım.
                 },
 
               ),
@@ -50,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   alignment: Alignment.center,
                   child: Container(
                     margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    child: Text('Senin için özel olarak hazırlanan programlara bir bakalım',
+                    child: Text('Diyet uzmanlarını inceleyin',
                       style: metin,),
                   ),
                 ),
